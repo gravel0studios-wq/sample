@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional Portfolio - Business Management Expert. Showcasing experience, skills, and achievements.">
+<title>Professional Portfolio | Business Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --bg: #081C45;
+  --bg-alt: #0A2463;
+  --bg-dark: #061333;
+  --surface: rgba(10, 36, 99, 0.80);
+  --surface-soft: rgba(13, 32, 72, 0.74);
+  --border: rgba(212, 175, 55, 0.18);
+  --border-strong: rgba(212, 175, 55, 0.35);
+  --text: #FFFFFF;
+  --text-soft: #F5F7FA;
+  --text-muted: rgba(245, 247, 250, 0.72);
+  --text-dim: rgba(245, 247, 250, 0.62);
+  --gold: #D4AF37;
+  --gold-soft: rgba(212, 175, 55, 0.16);
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.22);
+  --gradient: linear-gradient(135deg, #081C45, #0A2463, #163B8C);
+  --gradient-soft: radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 45%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.06), transparent 28%), linear-gradient(135deg, #081C45 0%, #0A2463 45%, #163B8C 100%);
+  color: var(--text);
+  line-height: 1.75;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--gold);
+  color: var(--bg-dark);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.28);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.42);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLLBAR & UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.92);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 20px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: 15%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.14), transparent 55%);
+  border-radius: 50%;
+  animation: float 12s ease-in-out infinite;
+  z-index: 0;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -24%;
+  left: 5%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 52%);
+  border-radius: 50%;
+  animation: float 16s ease-in-out infinite reverse;
+  z-index: 0;
+}
+
+.hero-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  color: var(--text);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-content h1 span {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), rgba(255, 255, 255, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  margin-bottom: 36px;
+  line-height: 1.9;
+  max-width: 680px;
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.meta-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: var(--text);
+  backdrop-filter: blur(18px);
+}
+
+.hero-content-cta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0A2463 0%, #163B8C 100%);
+  color: var(--text);
+  border: 1px solid var(--gold-soft);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #163B8C 0%, #0A2463 100%);
+  border-color: var(--gold);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.btn-secondary:hover {
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateY(-2px);
+}
+
+.hero-photo {
+  position: relative;
+  animation: slideInRight 0.8s ease-out;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+..hero-photo::before,
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.hero-photo::before {
+  top: -30px;
+  right: -26px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.24), transparent 55%);
+  filter: blur(18px);
+}
+
+.hero-photo::after {
+  bottom: -34px;
+  left: -24px;
+  width: 210px;
+  height: 210px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.18), transparent 60%);
+  filter: blur(16px);
+}
+
+.photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(12, 34, 58, 0.24);
+  box-shadow: 0 30px 80px rgba(212, 175, 55, 0.14), 0 0 0 1px rgba(212, 175, 55, 0.08);
+  backdrop-filter: blur(18px);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.photo-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), transparent 50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(212, 175, 55, 0.16);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  filter: saturate(1.06) contrast(1.04);
+  transition: transform 0.45s ease;
+}
+
+.photo-frame:hover img {
+  transform: scale(1.02);
+}
+
+.photo-caption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -32px;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  width: calc(100% + 60px);
+  max-width: 420px;
+  background: rgba(8, 28, 69, 0.96);
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  border-radius: 32px;
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(24px);
+  font-size: 0.98rem;
+}
+
+.photo-caption strong {
+  color: var(--gold);
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(13, 32, 72, 0.24) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════════════════════ */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(8, 28, 69, 0.84);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+  z-index: 1000;
+  padding: 18px 0;
+}
+
+nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 0 20px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+}
+
+nav ul::-webkit-scrollbar {
+  display: none;
+}
+
+nav li {
+  scroll-snap-align: center;
+}
+
+nav a {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+  position: relative;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: var(--gold);
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+section,
+header {
+  scroll-margin-top: 92px;
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.95), rgba(212, 175, 55, 0.65));
+  border-radius: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ABOUT SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#about {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(10, 36, 99, 0.08));
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  margin-bottom: 22px;
+  line-height: 1.95;
+  max-width: 680px;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 15px;
+}
+
+.highlight-item {
+  display: flex;
+  gap: 18px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--gold);
+  border-radius: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.highlight-item:hover {
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateX(8px);
+}
+
+.highlight-item i {
+  color: var(--gold);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.highlight-item div h4 {
+  font-size: 1.05rem;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.highlight-item div p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EDUCATION SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#education {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(8, 28, 69, 0.08));
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.education-card {
+  background: rgba(10, 36, 99, 0.86);
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.95), rgba(212, 175, 55, 0.65));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(212, 175, 55, 0.18);
+}
+
+.education-card:hover::before {
+  transform: scaleX(1);
+}
+
+.education-card .degree {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.education-card .institution {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.education-card .year {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.education-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SKILLS SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#skills {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(8, 28, 69, 0.08));
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-category {
+  background: rgba(10, 36, 99, 0.84);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(14px);
+}
+
+.skill-category:hover {
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.skill-category h3 {
+  color: var(--text);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-item .skill-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #D4AF37 0%, rgba(212, 175, 55, 0.8) 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.22);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EXPERIENCE/JOURNEY SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#experience {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(8, 28, 69, 0.08));
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: var(--border);
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: 0;
+  margin-right: 52%;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 52%;
+  margin-right: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--gold);
+  border: 3px solid rgba(8, 28, 69, 0.95);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.timeline-content {
+  background: rgba(10, 36, 99, 0.88);
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(14px);
+}
+
+.timeline-content:hover {
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  transform: translateY(-3px);
+}
+
+.timeline-content h3 {
+  color: var(--gold);
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.timeline-content .year {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 40px;
+    margin-right: 0;
+  }
+
+  .timeline-dot {
+    left: 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INTERESTS & HOBBIES
+   ═══════════════════════════════════════════════════════════════ */
+
+#interests {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(8, 28, 69, 0.08));
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.interest-card {
+  background: rgba(10, 36, 99, 0.88);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(14px);
+}
+
+.interest-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.interest-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.interest-card h3 {
+  color: var(--text);
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+}
+
+.interest-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOG SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#blogs {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(8, 28, 69, 0.08));
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blog-card {
+  background: rgba(10, 36, 99, 0.88);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.24);
+}
+
+.blog-image {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(255, 255, 255, 0.06) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.blog-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-category {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.12em;
+}
+
+.blog-card h3 {
+  color: var(--text);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.blog-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.blog-date {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: gap 0.3s ease;
+}
+
+.blog-read-more:hover {
+  gap: 12px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACHIEVEMENTS SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#achievements {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(8, 28, 69, 0.08));
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.achievement-card {
+  background: rgba(10, 36, 99, 0.88);
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: 24px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: -45%;
+  right: -45%;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, transparent 60%);
+  border-radius: 50%;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.22);
+}
+
+.achievement-icon {
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  color: var(--gold);
+}
+
+.achievement-card h3 {
+  color: var(--text);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.achievement-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTACT SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#contact {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(8, 28, 69, 0.08));
+}
+
+.contact-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(10, 36, 99, 0.84);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+.contact-link i {
+  color: var(--gold);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════════ */
+
+footer {
+  background: rgba(10, 36, 99, 0.9);
+  border-top: 1px solid rgba(212, 175, 55, 0.16);
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-soft);
+  margin-top: 80px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE DESIGN
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content-cta {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═════════════════════════════════════════════════════════════
+     NAVIGATION
+     ═════════════════════════════════════════════════════════════ -->
+<nav>
+  <ul>
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#education" class="nav-link">Education</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#interests" class="nav-link">Interests</a></li>
+    <li><a href="#blogs" class="nav-link">Blogs</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═════════════════════════════════════════════════════════════
+     HERO SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<header id="home">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1><span>Eswari M. R.</span></h1>
+      <p>Business Management student with expertise in pharmaceutical process development and Manufacturing Quality Assurance. Incoming MBA-BM 2026-28 Cohort of XIMB. Passionate about strategic planning and organizational development.</p>
+      
+      <div class="hero-meta">
+        <div class="meta-badge">
+          <i class="fas fa-briefcase"></i>
+          <span>7-months experience in Dr. Reddy's Laboratories</span>
+        </div>
+        <div class="meta-badge">
+          <i class="fas fa-certificate"></i>
+          <span>Certified Professional</span>
+        </div>
+      </div>
+
+      <div class="hero-content-cta">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          Get in Touch
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          <i class="fas fa-arrow-down"></i>
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img src="bg_removed_candidate_image.png" alt="Candidate Photo">
+      </div>
+      <div class="photo-caption">
+        <span><strong>Business Management</strong></span>
+        <span>Incoming MBA 2026-28</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═════════════════════════════════════════════════════════════
+     ABOUT SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  
+  <div class="about-grid">
+    <div class="about-content">
+      <p>I am a dedicated business management student with a comprehensive background in pharmaceutical research and development, manufacturing, business operations, and team leadership. My career has been marked by a commitment to excellence and a drive to create meaningful impact in every role I undertake.</p>
+      
+      <p>With a proven track record of implementing strategic initiatives, optimizing processes, and fostering collaborative team environments, I bring a unique blend of analytical thinking and interpersonal skills to every project.</p>
+
+      <p>I believe in continuous learning and staying abreast of industry trends and best practices. My goal is to leverage my expertise to help organizations achieve their objectives and create value in today's dynamic business environment.</p>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-item">
+        <i class="fas fa-target"></i>
+        <div>
+          <h4>Strategic Planning</h4>
+          <p>Developing comprehensive business strategies and roadmaps</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-chart-line"></i>
+        <div>
+          <h4>Business Analysis</h4>
+          <p>Data-driven insights for informed decision making</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-users"></i>
+        <div>
+          <h4>Team Leadership</h4>
+          <p>Building and managing high-performance teams</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-cogs"></i>
+        <div>
+          <h4>Operations</h4>
+          <p>Streamlining processes and improving efficiency</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     EDUCATION SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  
+  <div class="education-grid">
+    <div class="education-card">
+      <div class="degree">Master of Business Administration</div>
+      <div class="institution">XIMB - Xavier School of Management</div>
+      <div class="year">2026 - 2028</div>
+      <p>Incoming cohort of 2026-28 batch. Looking forward to honing my skills in organisational behaviour and business strategy.</p>
+    </div>
+
+    <div class="education-card">
+      <div class="degree">Bachelor of Technology in Biotechnology</div>
+      <div class="institution">Vellore Institute of Technology</div>
+      <div class="year">2020 - 2024</div>
+      <p>Strong foundation in bioengineering processes and molecular biology. Gained hands-on experience in laboratory techniques and research methodologies. Developed analytical skills through lab work and leadership experience via multiple clubs and chapters. </p>
+    </div>
+
+    <div class="education-card">
+      <div class="degree">Professional Certifications</div>
+      <div class="institution">Principles of Management</div>
+      <div class="year">NPTEL</div>
+      <p>Continuously pursuing professional development including project management, digital marketing, and organizational leadership certifications.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     EXPERIENCE & JOURNEY SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="experience">
+  <h2 class="section-title">Journey & Experience</h2>
+  
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Technical Trainee-Dr.Reddys Laboratories</h3>
+        <div class="year">Aug 2024 - March 2025</div>
+        <p>Worked in upstream process development for biosimilars which includes utilising bioengineering techniques and collaborating with research teams. Also supervised manufacturing Quality Assurance with their in-process productions and line activities. Helped draft site SOPs and worked on deviations and CAPA.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Intern- Upstream Process Development, Dr.Reddys Laboratories</h3>
+        <div class="year">Feb 2024- July 2025</div>
+        <p>Managed day-to-day operations and worked on creating new process for biosimilars which was successfully approved by EMA. </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Regional Coordinator, Pink Legal</h3>
+        <div class="year">Jan 2022- Sept 2022</div>
+        <p>Supported strategic planning initiatives regarding legal awareness on women's empowerment. Lead 19 clubs throughout India on various projects including initiatives for women empowerment. Successfully transitioned from online to offline during Covid-19 pandemic.</p>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     SKILLS SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="skills">
+  <h2 class="section-title">Professional Skills</h2>
+  
+  <div class="skills-container">
+    <div class="skill-category">
+      <h3>Business & Strategy</h3>
+      
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Strategic Planning</span>
+          <span>95%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 95%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Business Analysis</span>
+          <span>90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Operations Management</span>
+          <span>88%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 88%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Leadership & Management</h3>
+      
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Team Leadership</span>
+          <span>92%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 92%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Project Management</span>
+          <span>89%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 89%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Stakeholder Management</span>
+          <span>85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Technical & Analytical</h3>
+      
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Data Analysis</span>
+          <span>87%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 87%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Excel & Business Tools</span>
+          <span>90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-name">
+          <span>Financial Analysis</span>
+          <span>84%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 84%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     INTERESTS & HOBBIES SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="interests">
+  <h2 class="section-title">Interests & Hobbies</h2>
+  
+  <div class="interests-grid">
+    <div class="interest-card">
+      <div class="interest-icon">📚</div>
+      <h3>Reading</h3>
+      <p>Passionate about reading books, case studies, and exploring writing blogs.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">🏃‍♀️</div>
+      <h3>Fitness & Wellness</h3>
+      <p>Regular yoga and running enthusiast. Believe in maintaining a healthy work-life balance for peak performance.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">✈️</div>
+      <h3>Travel</h3>
+      <p>Loves exploring new cultures and destinations. Travel provides inspiration and broader perspectives on the ways I view life.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">🎨</div>
+      <h3>Creative Projects</h3>
+      <p>Enjoys working on creative problem-solving initiatives like puzzles and artworks.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">💼</div>
+      <h3>Mentoring</h3>
+      <p>Passionate about mentoring young professionals and helping them develop their careers in business management.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">🎓</div>
+      <h3>Continuous Learning</h3>
+      <p>Committed to lifelong learning through workshops, online courses, and professional development programs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     ACHIEVEMENTS SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="achievements">
+  <h2 class="section-title">Achievements & Milestones</h2>
+  
+  <div class="achievements-grid">
+    <div class="achievement-card">
+      <div class="achievement-icon">🏆</div>
+      <h3>Best club award- SOS-VIT & BRSI-VIT</h3>
+      <p>Recognised consecutively for two years in different clubs for extraordinary performance during the academic years of 2022-23 & 2023-24</p>
+    </div>
+
+    <div class="achievement-card">
+      <div class="achievement-icon">⭐</div>
+      <h3>Performance Excellence</h3>
+      <p>Bagged the best region award for 2 consecutive quarters and was rated as the best Regional Coordinator</p>
+    </div>
+
+
+
+    <div class="achievement-card">
+      <div class="achievement-icon">👥</div>
+      <h3>Team Development</h3>
+      <p>Mentored and developed 19 clubs consisting of 80 college students(primarily women), several of whom have law backgrounds and went onto work in women's rights.</p>
+    </div>
+
+    <div class="achievement-card">
+      <div class="achievement-icon">🌟</div>
+      <h3>Academia Recognition</h3>
+      <p>Published research paper in the South African Journal of Botany regarding treatments for adenocarcinoma. </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     BLOGS SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="blogs">
+  <h2 class="section-title">Latest Articles & Insights</h2>
+  
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-image">📊</div>
+      <div class="blog-content">
+        <div class="blog-category">Business Strategy</div>
+        <h3>The Future of Business Management</h3>
+        <div class="blog-description">Exploring how digital transformation is reshaping business management practices and the skills needed for success in the modern era.</div>
+        <div class="blog-date">March 2024</div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-image">👥</div>
+      <div class="blog-content">
+        <div class="blog-category">Leadership</div>
+        <h3>Building High-Performing Teams</h3>
+        <div class="blog-description">Insights on effective team management, fostering collaboration, and creating a culture of excellence and continuous improvement.</div>
+        <div class="blog-date">February 2024</div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-image">⚙️</div>
+      <div class="blog-content">
+        <div class="blog-category">Operations</div>
+        <h3>Process Optimization Best Practices</h3>
+        <div class="blog-description">Practical strategies for identifying bottlenecks, implementing process improvements, and measuring operational excellence.</div>
+        <div class="blog-date">January 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     CONTACT SECTION
+     ═════════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <h2 class="section-title">Let's Connect</h2>
+  
+  <div class="contact-container">
+    <p>I'm always interested in hearing about new opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
+    
+    <div class="contact-links">
+      <a href="mailto:eshurajangam@gmail.com" class="contact-link">
+        <i class="fas fa-envelope"></i>
+        Email
+      </a>
+      <a href="https://www.linkedin.com/in/eswari-rajangam" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin"></i>
+        LinkedIn
+      </a>
+      
+      <a href="tel:+91-0000000000" class="contact-link">
+        <i class="fas fa-phone"></i>
+        Phone
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════
+     FOOTER
+     ═════════════════════════════════════════════════════════════ -->
+<footer>
+  <p>&copy; 2026 Eswari M. R. | Business Management Professional | All rights reserved.</p>
+</footer>
+
+<script>
+// Smooth scrolling for navigation
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      
+      // Update active link
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Scroll to section with offset for fixed header
+      const target = document.querySelector(href);
+      const nav = document.querySelector('nav');
+      const navHeight = nav ? nav.offsetHeight : 0;
+      if (target) {
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+        window.scrollTo({ top: Math.max(0, targetPosition), behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+// Update active nav link on scroll
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section, header');
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - 100) {
+      current = section.getAttribute('id');
+    }
+  });
+  
+  document.querySelectorAll('nav a').forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.animation = 'fadeInUp 0.8s ease-out';
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+  section.style.opacity = '0';
+  observer.observe(section);
+});
+</script>
+
+</body>
+</html>
